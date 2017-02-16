@@ -1,0 +1,66 @@
+@import 'reset';
+@import 'variables';
+@import 'app';
+@mixin transition($props...) {
+	-webkit-transition: $props;
+    -moz-transition: $props;
+    -ms-transition: $props;
+    -o-transition: $props;
+    transition: $props;
+    transition: $props;
+}
+
+.filtersWrapper, .visible {
+	width: 0;
+	right: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	height:100%; 
+    background: #ccc;
+    @include transition(-webkit-transform ease 250ms);
+}
+
+.visible {
+	width: 25rem;
+}
+
+.hideFilterHidden {
+	background: #559b9c;
+	padding: 1rem;
+	color: $textBrightColor;
+}
+
+.filterHeader
+ {
+	@include filterHeader;
+}
+
+.abvFilterHeader {
+	@include filterHeader;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+.filterOptions {
+	padding: 0.5rem 0.5rem;
+	color: #666;
+	font-size: 0.8rem;
+	margin-bottom: 1rem;
+	label {
+		width: 100%;
+		float:left;
+		background: #ccc;
+	}
+	input {
+		margin-right: 0.2rem;
+	}
+}
+
+.yearSelector {
+    width: 94%;
+    margin: 0 3%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+}

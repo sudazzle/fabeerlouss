@@ -1,0 +1,31 @@
+@import 'reset';
+@import 'variables';
+
+body {
+	background: $bgColor;
+	font-family: sans-serif;
+}
+
+.contentWrapper {
+	overflow: hidden;
+	width:100%;
+	float: left;
+}
+
+.header {
+	padding: 0.2rem 0.5rem;
+	background: #EFC84A;
+	.logo {
+		width: 4rem;
+		margin-top: 0.15rem;
+	}
+	.showFilter {
+		@include buttons(0.2rem, #334d5c, $textBrightColor, #5e737f);
+		float: right;
+		margin-top: 1rem;
+	}
+}
+
+.beerContainerHeader {
+	@include pageHeader;
+}
