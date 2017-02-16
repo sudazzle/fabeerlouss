@@ -12,3 +12,5 @@
 
 #### to run the file in production:
 > npm run start -- if you get error the server is already running
+
+> browse on http://localhost:3080
